@@ -7,10 +7,7 @@ generateRuleTests({
 
   config: true,
 
-  good: [
-    '<img style={{background-image url}}>',
-    '<img style="background-image: url(/foo.png)"}}>'
-  ],
+  good: ['<img style={{background-image url}}>', '<img style="background-image: url(/foo.png)"}}>'],
 
   bad: [
     {
@@ -21,8 +18,8 @@ generateRuleTests({
         moduleId: 'layout.hbs',
         source: 'style="background-image: {{url}}"',
         line: 1,
-        column: 5
-      }
+        column: 5,
+      },
     },
     {
       template: '<img style="{{background-image url}}">',
@@ -32,8 +29,8 @@ generateRuleTests({
         moduleId: 'layout.hbs',
         source: 'style="{{background-image url}}"',
         line: 1,
-        column: 5
-      }
-    }
-  ]
+        column: 5,
+      },
+    },
+  ],
 });
